@@ -5,7 +5,7 @@ pipeline{
          steps{
          sh '''
 
-         git pull
+
          cd modules
               terraform init
             '''
