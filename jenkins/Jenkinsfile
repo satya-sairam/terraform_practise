@@ -1,0 +1,39 @@
+pipeline {
+   agent any
+   stages{
+     stage('run on java'){
+      agent{
+        node{label 'JAVA'}}
+        steps{
+        sh '''
+        echo hello world running on java
+        '''
+         }
+    }
+
+     stage('run on python'){
+          agent{
+            node{label 'PYTHON'}}
+            steps{
+            sh '''
+            echo hello world running on python
+            '''
+             }
+        }
+         stage('run on nodejs'){
+                  agent{
+                    node{label 'NODEJS'}}
+                    steps{
+                    sh '''
+                    echo hello world running on nodejs
+                    '''
+                     }
+                }
+
+   }
+
+
+
+
+
+}
