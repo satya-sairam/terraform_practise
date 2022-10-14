@@ -20,5 +20,11 @@ pipeline{
             terraform apply -auto-approve
             '''
             }
+
+             stage("terraform apply"){
+                        sh '''
+                        echo "hello"
+                        '''
+                        }
    }
 }
