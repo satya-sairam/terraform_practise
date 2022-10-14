@@ -25,7 +25,7 @@ pipeline{
           steps{
             sh '''
             cd modules
-            terraform apply -auto-approve
+            terraform destroy -auto-approve
             '''}
             }
 
